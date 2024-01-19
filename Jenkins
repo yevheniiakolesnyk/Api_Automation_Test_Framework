@@ -1,0 +1,11 @@
+cd C:\[Way to Dockerfile]
+docker build -t [Docker Container Name] .
+docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v [Jenkins folder on the laptop]:/var/jenkins_home [Docker Container Name]
+
+Settings > Execute shell > Command
+
+cd Api_Automation_Test_Framework
+git pull
+. venv/bin/activate
+pip install -r requirements.txt
+pytest
