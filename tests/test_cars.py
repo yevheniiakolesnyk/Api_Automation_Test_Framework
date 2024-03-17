@@ -5,7 +5,6 @@ from src.services import CarApiService
 
 car_api = CarApiService()
 
-
 def test_create_new_car(sign_up_response, headers):
     payload = json.dumps({
         "carBrandId": 1,
